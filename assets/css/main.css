@@ -90,6 +90,21 @@ section {
   display: inline-block;
 }
 
+.section-header2 h2 {
+  font-size: 32px;
+  font-weight: 700;
+  position: relative;
+  color: #2e3135;
+}
+
+.section-header2 h2:before,
+.section-header2 h2:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  display: inline-block;
+}
+
 .section-header h2:before {
   margin: 0 15px 10px 0;
 }
@@ -2675,6 +2690,7 @@ section {
 }
 
 .interview-question2{
+  text-align: right;
   font-size: 24px; /* Tamaño de fuente deseado */
   font-weight: bold; /* Puedes ajustar el peso de la fuente según tus preferencias */
   color: #333; /* Cambia el color del texto según tu diseño */
