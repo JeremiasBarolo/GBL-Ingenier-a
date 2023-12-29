@@ -989,7 +989,7 @@ section {
 
 .testimonials .testimonial-item {
   box-sizing: content-box;
-  padding: 30px 30px 30px 60px;
+  padding: 30px 30px 5px 60px;
   margin: 0 15px 30px 0;
   min-height: 200px;
   box-shadow: 0px 2px 20px rgba(82, 86, 94, 0.1);
@@ -2665,4 +2665,18 @@ section {
 
 .footer .footer-legal .credits a {
   color: var(--color-primary);
+}
+
+.interview-question {
+  font-size: 24px; /* Tamaño de fuente deseado */
+  font-weight: bold; /* Puedes ajustar el peso de la fuente según tus preferencias */
+  color: #333; /* Cambia el color del texto según tu diseño */
+  margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+}
+
+.interview-question2{
+  font-size: 24px; /* Tamaño de fuente deseado */
+  font-weight: bold; /* Puedes ajustar el peso de la fuente según tus preferencias */
+  color: #333; /* Cambia el color del texto según tu diseño */
+  margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
 }
