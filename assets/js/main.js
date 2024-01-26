@@ -8,6 +8,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
+  
+
   /**
    * Preloader
    */
@@ -208,6 +210,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.addEventListener('load', () => {
     aos_init();
+  });
+
+  window.addEventListener('scroll', function() {
+    var header = document.getElementById('header');
+    if (window.scrollY > 50) {
+      header.classList.add('blue');
+    } else {
+      header.classList.remove('blue');
+    }
   });
 
 });

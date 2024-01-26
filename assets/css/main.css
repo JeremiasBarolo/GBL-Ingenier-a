@@ -13,14 +13,16 @@
 /* Fonts */
 :root {
   --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-primary: "Roboto", sans-serif;
-  --font-secondary: "Work Sans", sans-serif;
+  --font-primary: "Montserrat", sans-serif; 
+  --font-secondary: "Oswald", sans-serif; 
+  --font-bold: 700; 
+  --font-medium: 500; 
 }
 
 /* Colors */
 :root {
   --color-default: #364d59;
-  --color-primary: #feb900;
+  --color-primary: #1f4b9b;
   --color-secondary: #52565e;
 }
 
@@ -65,6 +67,7 @@ h6 {
   font-family: var(--font-primary);
 }
 
+
 /*--------------------------------------------------------------
 # Sections & Section Header
 --------------------------------------------------------------*/
@@ -73,13 +76,26 @@ section {
   overflow: hidden;
 }
 
+
 .section-bg {
   background-color: #f5f6f7;
+}
+
+.title {
+  font-family: var(--font-primary); 
+  font-weight: 600; 
 }
 
 .section-header {
   text-align: center;
   padding-bottom: 70px;
+  background-color: #fff; /* Puedes ajustar el color de fondo según tus necesidades */
+  z-index: 1000; /* Asegúrate de que el z-index sea mayor que el de otros elementos si es necesario */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .section-header h2 {
@@ -96,6 +112,8 @@ section {
   height: 2px;
   background: var(--color-primary);
   display: inline-block;
+  
+  font-weight: var(--font-bold)
 }
 
 .section-header2 h2 {
@@ -130,6 +148,10 @@ section {
     max-width: 60%;
   }
 }
+
+
+
+
 
 /*--------------------------------------------------------------
 # Breadcrumbs
@@ -2703,4 +2725,18 @@ section {
   font-weight: bold; /* Puedes ajustar el peso de la fuente según tus preferencias */
   color: #333; /* Cambia el color del texto según tu diseño */
   margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+  z-index: 1000;
+  background-color: white; /* Color de fondo inicial (blanco) */
+}
+
+.header.blue {
+  background-color: var(--color-primary); /* Color de fondo al hacer scroll (azul) */
 }
