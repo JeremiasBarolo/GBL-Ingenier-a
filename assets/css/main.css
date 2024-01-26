@@ -12,7 +12,7 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-default: "Oswald", sans-serif ;
   --font-primary: "Montserrat", sans-serif; 
   --font-secondary: "Oswald", sans-serif; 
   --font-bold: 700; 
@@ -23,7 +23,7 @@
 :root {
   --color-default: #364d59;
   --color-primary: #1f4b9b;
-  --color-secondary: #52565e;
+  --color-secondary: #1eab71;
 }
 
 /* Smooth scroll behavior */
@@ -89,8 +89,8 @@ section {
 .section-header {
   text-align: center;
   padding-bottom: 70px;
-  background-color: #fff; /* Puedes ajustar el color de fondo según tus necesidades */
-  z-index: 1000; /* Asegúrate de que el z-index sea mayor que el de otros elementos si es necesario */
+  background-color: #fff; 
+  z-index: 1000; 
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
@@ -112,7 +112,6 @@ section {
   height: 2px;
   background: var(--color-primary);
   display: inline-block;
-  
   font-weight: var(--font-bold)
 }
 
@@ -307,7 +306,7 @@ section {
 .header .logo h1 {
   font-size: 24px;
   font-weight: 700;
-  color: #fff;
+  color: var(--color-primary);
   margin-bottom: 0;
   font-family: var(--font-primary);
 }
@@ -2734,9 +2733,24 @@ section {
   width: 100%;
   transition: background-color 0.3s ease-in-out;
   z-index: 1000;
-  background-color: white; /* Color de fondo inicial (blanco) */
+  background-color: white; 
+  
+}
+
+.header .nav-link{
+  color: var(--color-primary);
 }
 
 .header.blue {
-  background-color: var(--color-primary); /* Color de fondo al hacer scroll (azul) */
+  background-color: var(--color-primary); 
+  color: white; 
 }
+
+.header.blue .navbar ul li a {
+  color: white; 
+}
+
+.header.blue .logo h1{
+  color: white;
+}
+
