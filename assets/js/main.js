@@ -214,11 +214,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', function() {
     var header = document.getElementById('header');
+    var logoImg = document.querySelector('.logo-img');
     if (window.scrollY > 50) {
       header.classList.add('blue');
     } else {
       header.classList.remove('blue');
     }
+
+   
+  
+    // if (window.scrollY > 50) {
+    //   header.classList.add('blue');
+    //   logoImg.src = "./assets/img/apple-touch-icon.png"
+       
+    // } else {
+    //   header.classList.remove('blue');
+    //    logoImg.src = "./assets/img/GBL_RGB blue.png"
+    // }
+
   });
 
   const sections = document.querySelectorAll('section'); // Obtener todas las secciones
@@ -273,5 +286,25 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  var logoImg = document.getElementById('logo-img');
+  
+  
+  if (window.scrollY > 50) {
+    logoImg.src = "./assets/img/GBL_RGB blue.png"; 
+  } else {
+    logoImg.src = "./assets/img/apple-touch-icon.png"; 
+  }
+
+  
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {
+      logoImg.src = "./assets/img/apple-touch-icon.png"; 
+    } else {
+      
+      logoImg.src = "./assets/img/GBL_RGB blue.png"; 
+    }
+  });
+  
 
 });
