@@ -221,4 +221,57 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  const sections = document.querySelectorAll('section'); // Obtener todas las secciones
+  const navLinks = document.querySelectorAll('.header .nav-link'); // Obtener todos los enlaces de navegación
+
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function updateActiveNavLink() {
+    let activeSectionIndex = 0;
+    let minDistanceToViewport = Infinity;
+
+    sections.forEach((section, index) => {
+      const distanceToViewport = Math.abs(section.getBoundingClientRect().top);
+      if (distanceToViewport < minDistanceToViewport) {
+        minDistanceToViewport = distanceToViewport;
+        activeSectionIndex = index;
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove('active');
+    });
+
+    navLinks[activeSectionIndex].classList.add('active');
+  }
+
+  window.addEventListener('load', updateActiveNavLink);
+  window.addEventListener('scroll', updateActiveNavLink);
+
+  navLinks.forEach(function(link) {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+
+      navLinks.forEach(function(link) {
+        link.classList.remove('active');
+      });
+
+      link.classList.add('active');
+
+      const targetId = link.getAttribute('href');
+      const targetSection = document.querySelector(targetId);
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
 });

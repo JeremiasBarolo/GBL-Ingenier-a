@@ -21,7 +21,7 @@
 
 /* Colors */
 :root {
-  --color-default: #364d59;
+  --color-default: #222a52;
   --color-primary: #1f4b9b;
   --color-secondary: #1eab71;
 }
@@ -68,85 +68,7 @@ h6 {
 }
 
 
-/*--------------------------------------------------------------
-# Sections & Section Header
---------------------------------------------------------------*/
-section {
-  padding: 80px 0;
-  overflow: hidden;
-}
 
-
-.section-bg {
-  background-color: #f5f6f7;
-}
-
-.title {
-  font-family: var(--font-primary); 
-  font-weight: 600; 
-}
-
-.section-header {
-  text-align: center;
-  padding-bottom: 70px;
-  background-color: #fff; 
-  z-index: 1000; 
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-.section-header h2 {
-  font-size: 32px;
-  font-weight: 700;
-  position: relative;
-  color: #2e3135;
-}
-
-.section-header h2:before,
-.section-header h2:after {
-  content: "";
-  width: 50px;
-  height: 2px;
-  background: var(--color-primary);
-  display: inline-block;
-  font-weight: var(--font-bold)
-}
-
-.section-header2 h2 {
-  font-size: 32px;
-  font-weight: 700;
-  position: relative;
-  color: #2e3135;
-}
-
-.section-header2 h2:before,
-.section-header2 h2:after {
-  content: "";
-  width: 50px;
-  height: 2px;
-  display: inline-block;
-}
-
-.section-header h2:before {
-  margin: 0 15px 10px 0;
-}
-
-.section-header h2:after {
-  margin: 0 0 10px 15px;
-}
-
-.section-header p {
-  margin: 0 auto 0 auto;
-}
-
-@media (min-width: 1199px) {
-  .section-header p {
-    max-width: 60%;
-  }
-}
 
 
 
@@ -228,12 +150,12 @@ section {
 
 .scroll-top i {
   font-size: 24px;
-  color: var(--color-secondary);
+  color: white;
   line-height: 0;
 }
 
 .scroll-top:hover {
-  background: #ffc732;
+  background: var(--color-secondary);
   color: #fff;
 }
 
@@ -286,34 +208,7 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
-.header {
-  z-index: 997;
-  position: absolute;
-  padding: 30px 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
 
-.header .logo img {
-  max-height: 40px;
-  margin-right: 6px;
-}
-
-.header .logo h1 {
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--color-primary);
-  margin-bottom: 0;
-  font-family: var(--font-primary);
-}
-
-.header .logo h1 span {
-  color: var(--color-primary);
-}
 
 /*--------------------------------------------------------------
 # Desktop Navigation
@@ -756,6 +651,8 @@ section {
   height: 100%;
 }
 
+services
+
 .services .service-item .icon {
   width: 48px;
   height: 48px;
@@ -862,7 +759,7 @@ section {
 .features .nav-link.active {
   color: var(--color-primary);
   background-color: transparent;
-  border-color: var(--color-primary);
+  border-color: var(--color-secondary);
 }
 
 .features .tab-content {
@@ -1146,7 +1043,7 @@ section {
 .alt-services h3 {
   font-size: 28px;
   font-weight: 700;
-  color: var(--color-secondary);
+  color: var(--color-default);
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
@@ -1247,7 +1144,9 @@ section {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 20px;
-  color: var(--color-secondary);
+  color: var(--color-default);
+  font-family: var(--font-primary);
+  
 }
 
 .about .our-story p:last-child {
@@ -2726,32 +2625,150 @@ section {
   margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
 }
 
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
 .header {
+  z-index: 997;
   position: fixed;
+  padding: 30px 0;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+  background-color: white;
   transition: background-color 0.3s ease-in-out;
-  z-index: 1000;
-  background-color: white; 
-  
 }
 
-.header .nav-link{
+.header .logo img {
+  max-height: 40px;
+  margin-right: 6px;
+}
+
+.header .logo h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 0;
+  font-family: var(--font-primary);
+  color: var(--color-primary); /* Color del texto primario */
+}
+
+.header .logo h1 span {
   color: var(--color-primary);
 }
 
 .header.blue {
-  background-color: var(--color-primary); 
-  color: white; 
+  background-color: var(--color-primary);
 }
 
-.header.blue .navbar ul li a {
-  color: white; 
-}
-
-.header.blue .logo h1{
+.header.blue .nav-link {
   color: white;
 }
 
+.header.blue .nav-link.active {
+  color: white;
+}
 
+.header .nav-link {
+  color: var(--color-primary); /* Color de texto primario para todos los enlaces */
+  position: relative;
+}
+
+.header .nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: transparent;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.header .nav-link.active::after {
+  width: 100%;
+  background-color: var(--color-secondary);
+}
+
+.header-blue .nav-link.active::after {
+  background-color: white;
+}
+
+/*--------------------------------------------------------------
+# Sections & Section Header
+--------------------------------------------------------------*/
+section {
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: #f5f6f7;
+}
+
+.title {
+  font-family: var(--font-primary);
+  font-weight: 600;
+}
+
+.section-header {
+  text-align: center;
+  padding-bottom: 70px;
+  background-color: #fff;
+  z-index: 1000;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.section-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  position: relative;
+  color: var(--color-primary);
+}
+
+.section-header h2:before,
+.section-header h2:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: var(--color-primary);
+  display: inline-block;
+  font-weight: var(--font-bold);
+}
+
+.section-header h2:before {
+  margin: 0 15px 10px 0;
+}
+
+.section-header h2:after {
+  margin: 0 0 10px 15px;
+}
+
+.section-header p {
+  margin: 0 auto 0 auto;
+}
+
+@media (min-width: 1199px) {
+  .section-header p {
+    max-width: 60%;
+  }
+}
+
+.header.blue .logo h1 {
+  color: white; /* Color del texto del encabezado cuando está en estado "blue" */
+}
+
+.header .nav-link:hover {
+  color: var(--color-primary); /* Mantener el color del texto principal durante el hover */
+}
+.header .nav-link.active{
+  color: var(--color-primary);
+}
+
+.header .nav-link:hover {
+  color: var(--color-primary); /* Mantener el color del texto principal durante el hover */
+}
