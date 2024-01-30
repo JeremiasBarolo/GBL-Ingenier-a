@@ -1,0 +1,6 @@
+Nombre del proyecto: Las Magnolias
+Diseño arquitectónico: Falczuk&Segal
+Ubicación: Barrio Puertos del Lago, Escobar, Buenos Aires
+Destino: Vivienda unifamiliar
+Superficie construida: 240 m2
+Tipología constructiva: Estructura de hormigón armado y mampostería portante. Platea de fundación.

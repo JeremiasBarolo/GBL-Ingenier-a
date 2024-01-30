@@ -486,7 +486,7 @@ h6 {
 
 /* Ajuste de altura de las imágenes del carrusel */
 .carousel-item img {
-  width: 80vh; /* Establecer el ancho al 100% para ocupar todo el espacio disponible */
+  width: 100vh; /* Establecer el ancho al 100% para ocupar todo el espacio disponible */
   height: 80vh; /* Permitir que la altura se ajuste automáticamente según la relación de aspecto */
   background-size: cover; /* Mantener la proporción de la imagen sin recortarla */
 }

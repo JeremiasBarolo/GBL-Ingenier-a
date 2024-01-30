@@ -1,0 +1,6 @@
+Nombre del proyecto: Drumond oficinas
+Diseño arquitectónico: Grupo AR
+Ubicación: Pilar, Buenos Aires
+Destino: Reacondicionamiento de planta para oficinas
+Superficie construida: 150 m2
+Tipología constructiva: Reemplazo de mampostería portante por pórtico metálico.

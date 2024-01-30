@@ -1,0 +1,6 @@
+Nombre del proyecto: Formentera
+Diseño arquitectónico: Verona Construcciones
+Ubicación: Barrio Puertos del Lago, Escobar, Buenos Aires
+Destino: Vivienda unifamiliar
+Superficie construida: 470 m2
+Tipología constructiva: Estructura de hormigón armado y platea de fundación.

@@ -1,0 +1,6 @@
+Nombre del proyecto: Istambul
+Diseño arquitectónico: Verona Construcciones
+Ubicación: Del Viso, Pilar, Buenos Aires
+Destino: Vivienda unifamiliar
+Superficie construida: 330 m2
+Tipología constructiva: Estructura de hormigón armado y platea de fundación con canal perimetral.

@@ -1,0 +1,6 @@
+Nombre del proyecto: La Lomada Lote 156
+Diseño arquitectónico: Arq. Machado Malbrán
+Ubicación: Barrio La Lomada, Pilar, Buenos Aires
+Destino: Sótano aislado de vivienda
+Superficie construida: 50 m2
+Tipología constructiva: Muros de contención de hormigón armado. Losa y platea de fundación
