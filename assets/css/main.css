@@ -733,28 +733,37 @@ h6 {
 
 .new-text {
   color: #fff;
-  font-size: 5em;
+  font-size: 4em;
   font-weight: 700;
-  margin-right: 20px; /* Espacio entre el texto y el borde derecho */
+  font-family: var(--font-primary);
+  margin-right: 13em; 
+  line-height: 0.9;
 }
 
 .new-subtext {
   color: #fff;
-  font-size: 4.5em;
+  font-size: 3.2em;
   margin-bottom: 0;
-  font-weight: 700;
-  margin-right: 20px; /* Espacio entre el texto y el borde derecho */
+  font-weight: 500;
+  line-height: 0.9;
+  
 }
 
 @media (max-width: 768px) {
   .new-text {
-    font-size: 3em;
-    margin-right: 0; /* Eliminar margen derecho en dispositivos móviles */
+    color: #fff;
+    font-size: 2.4em;
+    font-weight: 700;
+    font-family: var(--font-primary);
+    margin-right: 0;
+    margin: 0 auto; 
+    line-height: 0.9;
   }
 
   .new-subtext {
-    font-size: 2em;
+    font-size: 1.8em;
     margin-right: 0; /* Eliminar margen derecho en dispositivos móviles */
+    line-height: 0.9;
   }
 
   .info {
