@@ -58,24 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 
-  /**
-   * Toggle mobile nav dropdowns
-   */
-  const navDropdowns = document.querySelectorAll('.navbar .dropdown > a');
-
-  navDropdowns.forEach(el => {
-    el.addEventListener('click', function(event) {
-      if (document.querySelector('.mobile-nav-active')) {
-        event.preventDefault();
-        this.classList.toggle('active');
-        this.nextElementSibling.classList.toggle('dropdown-active');
-
-        let dropDownIndicator = this.querySelector('.dropdown-indicator');
-        dropDownIndicator.classList.toggle('bi-chevron-up');
-        dropDownIndicator.classList.toggle('bi-chevron-down');
-      }
-    })
-  });
+  
 
   /**
    * Scroll top button
@@ -182,25 +165,16 @@ document.addEventListener('DOMContentLoaded', () => {
     var logoImg = document.querySelector('.logo-img');
     if (window.scrollY > 50) {
       header.classList.add('blue');
+      logoImg.src = "./assets/img/apple-touch-icon.png"; 
     } else {
       header.classList.remove('blue');
+      logoImg.src = "./assets/img/GBL_RGB blue.png"; 
     }
-
-   
-  
-    // if (window.scrollY > 50) {
-    //   header.classList.add('blue');
-    //   logoImg.src = "./assets/img/apple-touch-icon.png"
-       
-    // } else {
-    //   header.classList.remove('blue');
-    //    logoImg.src = "./assets/img/GBL_RGB blue.png"
-    // }
-
   });
+  
 
-  const sections = document.querySelectorAll('section'); // Obtener todas las secciones
-  const navLinks = document.querySelectorAll('.header .nav-link'); // Obtener todos los enlaces de navegación
+  const sections = document.querySelectorAll('section'); 
+  const navLinks = document.querySelectorAll('.header .nav-link'); 
 
   function isInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -252,28 +226,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  var logoImg = document.getElementById('logo-img');
-  
-  
-  if (window.scrollY > 50) {
-    logoImg.src = "./assets/img/GBL_RGB blue.png"; 
-  } else {
-    logoImg.src = "./assets/img/apple-touch-icon.png"; 
-  }
-
-  
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > 50) {
-      logoImg.src = "./assets/img/apple-touch-icon.png"; 
-    } else {
-      
-      logoImg.src = "./assets/img/GBL_RGB blue.png"; 
-    }
-  });
 
   var myCarousel = new bootstrap.Carousel(document.getElementById('carouselExampleSlidesOnly'), {
-    interval: 10000, // Cambia la imagen cada 2 segundos
-    wrap: true // El carrusel vuelve al principio después de la última imagen
+    interval: 10000, 
+    wrap: true 
   });
   
 

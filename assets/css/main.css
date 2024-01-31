@@ -828,6 +828,48 @@ h6 {
   opacity: 0.9;
 }
 
+.info {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  text-align: left; /* Alinear el texto a la izquierda */
+  padding-left: 20px; /* Espaciado izquierdo */
+}
+
+.new-text {
+  color: #fff;
+  font-size: 5em;
+  font-weight: 700;
+  margin-right: 20px; /* Espacio entre el texto y el borde derecho */
+}
+
+.new-subtext {
+  color: #fff;
+  font-size: 4.5em;
+  margin-bottom: 0;
+  font-weight: 700;
+  margin-right: 20px; /* Espacio entre el texto y el borde derecho */
+}
+
+@media (max-width: 768px) {
+  .new-text {
+    font-size: 3em;
+    margin-right: 0; /* Eliminar margen derecho en dispositivos móviles */
+  }
+
+  .new-subtext {
+    font-size: 2em;
+    margin-right: 0; /* Eliminar margen derecho en dispositivos móviles */
+  }
+
+  .info {
+    padding-left: 0; /* Eliminar el espacio izquierdo en dispositivos móviles */
+  }
+}
+
+
 
 /*--------------------------------------------------------------
 # Footer
@@ -1058,6 +1100,13 @@ color: white;
   background-color: white;
 }
 
+.header #nav-icon{
+  color: var(--color-primary);
+}
+.header.blue #nav-icon{
+  color: white
+}
+
 
 
 
@@ -1145,13 +1194,7 @@ section {
     background-position: center; /* Centra la imagen de fondo */
   }
 
-  .icon-box {
-    position: static; /* Cambia la posición de los icon-box a estática para que se muestren debajo del contenido en dispositivos móviles */
-    margin-top: 20px; /* Agrega margen superior para separar los icon-box del contenido */
-    background-color: transparent; /* Elimina el fondo de los icon-box para dispositivos móviles */
-    padding: 0; /* Elimina el relleno de los icon-box para dispositivos móviles */
-    border-radius: 0; /* Elimina el borde redondeado de los icon-box para dispositivos móviles */
-  }
+  
 }
 
 
