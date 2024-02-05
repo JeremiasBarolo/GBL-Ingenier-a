@@ -39,6 +39,9 @@ body {
   color: var(--color-default);
   overflow-x: hidden;
 }
+#main{
+  margin-top: 1em;
+}
 
 a {
   color: var(--color-primary);
@@ -65,6 +68,63 @@ h4,
 h5,
 h6 {
   font-family: var(--font-primary);
+}
+
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+  padding: 140px 0 60px 0;
+  min-height: 30vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.breadcrumbs:before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  inset: 0;
+}
+
+.breadcrumbs h2 {
+  font-size: 56px;
+  font-weight: 700;
+  color: #fff;
+  font-family: var(--font-primary);
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0 0 10px 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.breadcrumbs ol a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: 0.3s;
+}
+
+.breadcrumbs ol a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs ol li+li {
+  padding-left: 10px;
+}
+
+.breadcrumbs ol li+li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #fff;
+  content: "/";
 }
 
 
@@ -1036,6 +1096,16 @@ color: white;
   transition: width 0.3s ease, background-color 0.3s ease;
 }
 
+#nav-link1{
+  color: var(--color-primary);
+}
+
+.header.blue #nav-link1{
+  color: white;
+}
+
+
+
 @media (max-width: 768px) {
   .header .nav-link{
     color: white
@@ -1052,9 +1122,14 @@ color: white;
   .header .nav-link.active::after {
     width: 100%;
     background-color: white;
+  }
+  
 }
 
-}
+
+
+
+
 
 
 
@@ -1150,7 +1225,7 @@ section {
 
 .about .our-story {
   padding: 40px;
-  background-color: #3c74db;
+  background-color: #90D3EC;
   
 }
 
