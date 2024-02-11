@@ -109,7 +109,7 @@
           </div><!-- End Google Maps -->
 
           <div class="col-lg-6">
-            <form action="https://api-mailer-dev-xaks.4.us-1.fl0.io/send" method="post" id="form" role="form" class="php-email-form">
+            <form action="https://jeremiasbarolo.github.io/API-gbliIng/send" method="post" id="form" role="form" class="php-email-form">
               <div class="row gy-4">
                 <div class="col-lg-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Tu Nombre..." required>
@@ -208,7 +208,7 @@
       $form.addEventListener('submit', async (event) => {
         event.preventDefault();
         const formData = new FormData($form);
-        const response = await fetch('http://localhost:3000/send', {
+        const response = await fetch('https://jeremiasbarolo.github.io/API-gbliIng/send', {
             method: 'POST',
             body: formData
         });
