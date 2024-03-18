@@ -1955,3 +1955,37 @@ transition: 0.5s;
   padding-bottom: 10px;
   text-transform: uppercase;
 }
+
+@media (max-width: 768px) {
+  .img-fluid {
+      max-width: 40vw;
+      margin-bottom: 2vh;
+      margin-right: 6.8em; /* Ajusta el tamaño según sea necesario */
+  }
+
+  .scroll-top{
+    margin-right: 2px;
+  }
+
+  .mobile-nav-toggle{
+    margin-right: 0.2em;
+  }
+
+  .breadcrumbs h2{
+    margin-left: 1em;
+    margin-right: 1em;
+    font-size: 3em;
+  }
+
+  #explora{
+    margin-left: 0.9em;
+  }
+
+  #boton-contacto{
+    margin-left: 4em;
+  }
+
+  #boton-proyectos{
+    margin-left: 4em;
+  }
+}
